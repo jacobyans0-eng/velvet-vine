@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zexus MLBB Store | Premium Accounts</title>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-gold: #ffcc00;
+            --bg-dark: #0a0a0c;
+            --card-bg: #16161e;
+            --accent-blue: #00d4ff;
+            --text-light: #e0e0e0;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { 
+            font-family: 'Poppins', sans-serif; 
+            background-color: var(--bg-dark); 
+            color: var(--text-light);
+            overflow-x: hidden;
+        }
+
+        /* Navigation */
+        nav {
+            display: flex;
+            justify-content: center;
+            background: rgba(0, 0, 0, 0.8);
+            padding: 20px;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            border-bottom: 2px solid var(--primary-gold);
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 20px;
+            font-family: 'Orbitron', sans-serif;
+            font-size: 14px;
+            letter-spacing: 2px;
+            transition: 0.3s;
+        }
+        nav a:hover { color: var(--primary-gold); }
+
+        .page {
+            display: none;
+            min-height: 100vh;
+            padding-top: 100px;
+            animation: fadeIn 0.5s ease-in-out;
+        }
+        .active { display: block; }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* PAGE 1: HERO */
+        .hero {
+            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), 
+                        url('https://images.unsplash.com/photo-1542751371-adc38448a05e?auto=format&fit=crop&q=80&w=2000');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+        .hero h1 {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 4rem;
+            color: var(--primary-gold);
+            text-shadow: 0 0 20px rgba(255, 204, 0, 0.6);
+            margin-bottom: 10px;
+        }
+        .hero p { font-size: 1.2rem; letter-spacing: 5px; margin-bottom: 30px; }
+        .cta-btn {
+            padding: 15px 40px;
+            background: var(--primary-gold);
+            color: black;
+            text-decoration: none;
+            font-weight: bold;
+            font-family: 'Orbitron', sans-serif;
+            border-radius: 5px;
+            transition: 0.3s;
+        }
+        .cta-btn:hover { transform: scale(1.1); box-shadow: 0 0 20px var(--primary-gold); }
+
+        /* PAGE 2: STORE */
+        .container { max-width: 1200px; margin: 0 auto; padding: 20px; }
+        .section-title {
+            text-align: center;
+            font-family: 'Orbitron', sans-serif;
+            margin-bottom: 40px;
+            color: var(--primary-gold);
+        }
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+        .card {
+            background: var(--card-bg);
+            border: 1px solid #333;
+            border-radius: 15px;
+            padding: 20px;
+            text-align: center;
+            transition: 0.3s;
+        }
+        .card:hover { border-color: var(--primary-gold); transform: translateY(-10px); }
+        .card img { width: 100%; border-radius: 10px; margin-bottom: 15px; }
+        .price { font-size: 1.5rem; color: var(--primary-gold); margin: 15px 0; font-weight: bold; }
+        .badge {
+            display: inline-block;
+            background: #e91e63;
+            padding: 5px 10px;
+            border-radius: 5px;
+            font-size: 12px;
+            margin-bottom: 10px;
+        }
+        .collector-badge { background: #673ab7; }
+
+        /* PAGE 3: CONTACT */
+        .contact-box {
+            background: var(--card-bg);
+            max-width: 600px;
+            margin: 50px auto;
+            padding: 40px;
+            border-radius: 20px;
+            border-left: 5px solid var(--primary-gold);
+        }
+        .contact-item { margin-bottom: 25px; }
+        .contact-item h3 { color: var(--primary-gold); font-family: 'Orbitron', sans-serif; font-size: 1rem; }
+        .contact-item p { font-size: 1.2rem; margin-top: 5px; }
+
+        footer { text-align: center; padding: 40px; font-size: 12px; color: #666; }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <a href="#" onclick="showPage('home')">HOME</a>
+        <a href="#" onclick="showPage('store')">STORE</a>
+        <a href="#" onclick="showPage('contact')">CONTACT</a>
+    </nav>
+
+    <!-- PAGE 1: HOME -->
+    <div id="home" class="page active hero">
+        <h1>ZEXUS MLBB STORE</h1>
+        <p>RELIABLE . FAST . ELITE</p>
+        <a href="#" class="cta-btn" onclick="showPage('store')">BROWSE ACCOUNTS</a>
+    </div>
+
+    <!-- PAGE 2: STORE -->
+    <div id="store" class="page container">
+        <h2 class="section-title">AVAILABLE ACCOUNTS</h2>
+        
+        <div class="grid">
+            <!-- Account 1 -->
+            <div class="card">
+                <span class="badge">SMURF</span>
+                <img src="https://wallpapers.com/images/hd/mobile-legends-pictures-p2e0v4662d5yid2f.jpg" alt="MLBB Account">
+                <h3>Starter Epic Pack</h3>
+                <p>High Winrate | 30+ Heroes</p>
+                <div class="price">₹500</div>
+                <a href="#" class="cta-btn" style="padding: 10px 20px;" onclick="showPage('contact')">BUY NOW</a>
+            </div>
+
+            <!-- Account 2 -->
+            <div class="card">
+                <span class="badge">LEGEND</span>
+                <img src="https://img.api-onlineshop.com/6491741513295.jpg" alt="MLBB Account">
+                <h3>Venture Legend</h3>
+                <p>60+ Heroes | Special Skins</p>
+                <div class="price">₹700</div>
+                <a href="#" class="cta-btn" style="padding: 10px 20px;" onclick="showPage('contact')">BUY NOW</a>
+            </div>
+
+            <!-- Account 3 (Collector) -->
+            <div class="card" style="border: 1px solid #673ab7;">
+                <span class="badge collector-badge">WORLD COLLECTOR</span>
+                <img src="https://i.pinimg.com/736x/87/40/64/8740640f09805908269727402657803a.jpg" alt="MLBB Account">
+                <h3>Zexus Prime Edition</h3>
+                <p>All Heroes | 5+ Collector Skins | Max Emblems</p>
+                <div class="price">₹12,500</div>
+                <a href="#" class="cta-btn" style="padding: 10px 20px; background: #673ab7; color: white;" onclick="showPage('contact')">ENQUIRE</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- PAGE 3: CONTACT -->
+    <div id="contact" class="page container">
+        <h2 class="section-title">BUSINESS INFO</h2>
+        <div class="contact-box">
+            <div class="contact-item">
+                <h3>OFFICIAL GMAIL</h3>
+                <p>zexusyanthan@gmail.com</p>
+            </div>
+            <div class="contact-item">
+                <h3>MOBILE NUMBER</h3>
+                <p>+91 8794451151</p>
+            </div>
+            <div class="contact-item">
+                <h3>PAYMENT METHODS</h3>
+                <p>UPI / GPay / PhonePe</p>
+            </div>
+            <p style="font-size: 0.9rem; color: #888;">*Contact via WhatsApp or Email for instant account delivery after payment.</p>
+        </div>
+    </div>
+
+    <footer>
+        &copy; 2024 Zexus MLBB Store. All rights reserved. Not affiliated with Moonton.
+    </footer>
+
+    <script>
+        function showPage(pageId) {
+            // Hide all pages
+            const pages = document.querySelectorAll('.page');
+            pages.forEach(page => page.classList.remove('active'));
+            
+            // Show the selected page
+            document.getElementById(pageId).classList.add('active');
+            
+            // Scroll to top
+            window.scrollTo(0, 0);
+        }
+    </script>
+</body>
+</html>
